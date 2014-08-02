@@ -11,25 +11,33 @@
 							<td class="value">${level}</td>
 						</tr>
 
+						$if {!is_empty(range)}
 						<tr>
 							<td class="name">Range</td>
 							<td class="value">${range}</td>
 						</tr>
+						$endif
 
+						$if {!is_empty(mana_cost)}
 						<tr>
 							<td class="name">Mana Cost</td>
 							<td class="value">${mana_cost}</td>
 						</tr>
+						$endif
 
+						$if {!is_empty(cooldown)}
 						<tr>
 							<td class="name">Cooldown</td>
 							<td class="value">${cooldown}</td>
 						</tr>
+						$endif
 
+						$if {!is_empty(info)}
 						<tr>
 							<td class="name">Info</td>
 							<td class="value">${info}</td>
 						</tr>
+						$endif
 
 						<tr>
 							<td />

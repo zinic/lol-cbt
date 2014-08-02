@@ -73,22 +73,22 @@
 			"cooldown": "18 - ability.level * 2",
 			"active": {
 				"stats": {
-					"magic_damage": "80 + ability.level * 50 + champion.stats.attack_damage * .8"
+					"magic_damage": "80 + ability.level * 50 + champion.stats.ability_power * .8"
 				},
 				"info": "Caitlyn fires a net, knocking herself back 400 units in the opposite direction. The net will deal magic damage and slow the first enemy hit by 50%."
-			},
-			"ace_in_the_hole": {
-				"name": "Ace in the Hole",
-				"max_level": 5,
-				"range": "2000+ ability.level * 500",
-				"mana_cost": "100",
-				"cooldown": "90 - ability.level * 15",
-				"active": {
-					"stats": {
-						"physical_damage": "250 + ability.level * 225 + champion.stats.attack_damage * 2"
-					},
-					"info": "After a brief delay, Caitlyn locks onto a target enemy champion and channels for 1 second. While channeling, Caitlyn gains true sight of the target.If Caitlyn completes the channel, she will fire a 3200-speed homing projectile toward the target that deals physical damage to the first enemy champion it hits"
-				}
+			}
+		},
+		"ace_in_the_hole": {
+			"name": "Ace in the Hole",
+			"max_level": 3,
+			"range": "2000+ ability.level * 500",
+			"mana_cost": "100",
+			"cooldown": "90 - ability.level * 15",
+			"active": {
+				"stats": {
+					"physical_damage": "250 + ability.level * 225 + champion.stats.attack_damage * 2"
+				},
+				"info": "After a brief delay, Caitlyn locks onto a target enemy champion and channels for 1 second. While channeling, Caitlyn gains true sight of the target.If Caitlyn completes the channel, she will fire a 3200-speed homing projectile toward the target that deals physical damage to the first enemy champion it hits"
 			}
 		}
 	}
