@@ -3,6 +3,7 @@
 		"modal.template.html",
 		"add_item.template.html",
 		"item.template.html",
+		"ability_effect.template.html",
 		"ability.template.html"
 	]
 }

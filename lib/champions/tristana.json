@@ -107,7 +107,7 @@
 		"buster_shot": {
 			"name": "Buster Shot",
 
-			"max_level": 5,
+			"max_level": 3,
 			"range": "550 + (champion.level - 1) * 9",
 			"mana_cost": "50",
 			"cooldown": "60",
