@@ -1,0 +1,14 @@
+{
+	"name": "Doran's Blade",
+	"cost": 440,
+	"sell_value": 176,
+
+	"stats": {
+		"health": 70,
+		"attack_damage": 7,
+		"lifesteal": 3
+	},
+
+	"effects": [
+	]
+}

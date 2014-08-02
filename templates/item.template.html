@@ -1,0 +1,28 @@
+<span>${name}</span>
+<img src="/lib/css/jquery-ui-editable/images/clear.png" alt="Remove Item" onclick="remove_item('${key}');" />
+
+<table class="item_table">
+	<tbody>
+		<tr>
+			<td>
+				<table>
+					<tbody>
+						<tr>
+							<td class="name">Cost</td>
+							<td class="value">${cost}</td>
+						</tr>
+
+						<tr>
+							<td class="name">Sell Value</td>
+							<td class="value">${sell_value}</td>
+						</tr>
+
+						${stat_rows}
+						<tr><td><br /></td></tr>
+						${effect_rows}
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>

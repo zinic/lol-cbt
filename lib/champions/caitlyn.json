@@ -1,0 +1,38 @@
+{
+	"name": "Caitlyn",
+	"level": 1,
+
+	"stats": {
+		"values": {
+			"health": 390,
+			"health_regen": 4.75,
+			"mana": 255,
+			"mana_regen": 6.5,
+			"range": 650,
+			"attack_type": "RANGED",
+			"attack_damage": 47,
+			"attack_speed": 0.625,
+			"armor": 17,
+			"armor_pen": 0,
+			"magic_resist": 30,
+			"magic_pen": 0,
+			"movement_speed": 325,
+			"crit_chance": 0,
+			"lifesteal": 0,
+			"spellvamp": 0
+		},
+
+		"scalings": {
+			"health": 80,
+			"health_regen": 0.55,
+			"mana": 35,
+			"mana_regen": 0.55,
+			"range": 0,
+			"attack_damage": 3,
+			"attack_speed": 4,
+			"armor": 3.5,
+			"magic_resist": 0,
+			"movement_speed": 0
+		}
+	}
+}

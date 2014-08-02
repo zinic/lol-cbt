@@ -1,0 +1,126 @@
+{
+	"name": "Tristana",
+	"level": 1,
+
+	"stats": {
+		"values": {
+			"health": 415,
+			"health_regen": 5.1,
+			"mana": 193,
+			"mana_regen": 6.45,
+			"range": 550,
+			"attack_type": "RANGED",
+			"attack_damage": 46.5,
+			"attack_speed": 0.656,
+			"armor": 19,
+			"armor_pen": 0,
+			"magic_resist": 30,
+			"magic_pen": 0,
+			"movement_speed": 325,
+			"crit_chance": 0,
+			"lifesteal": 0,
+			"spellvamp": 0
+		},
+
+		"scalings": {
+			"health": 82,
+			"health_regen": 0.65,
+			"mana": 32,
+			"mana_regen": 0.45,
+			"range": 0,
+			"attack_damage": 3,
+			"attack_speed": 4,
+			"armor": 3,
+			"magic_resist": 0,
+			"movement_speed": 0
+		}
+	},
+
+	"abilities": {
+		"draw_a_bead": {
+			"name": "Draw a Bead",
+
+			"max_level": 0,
+			"info": "The range on Tristana's basic attacks, Explosive Shot and Buster Shot is increased by 9 × (Tristana's level - 1). At level 18, the bonus is 153 (703 range total)."
+		},
+
+		"rapid_fire": {
+			"name": "Rapid Fire",
+
+			"max_level": 5,
+			"mana_cost": 0,
+			"cooldown": 20,
+
+			"active": {
+				"stats": {
+					"attack_speed": "30 + ability.level * 15"
+				},
+
+				"info": "Increases Tristana's attack speed for 7 seconds."
+			}
+		},
+
+		"rocket_jump": {
+			"name": "Rocket Jump",
+
+			"max_level": 5,
+			"range": 900,
+			"mana_cost": 60,
+			"cooldown": "22 - ability.level * 2",
+			"info": "Rocket Jump's cooldown resets whenever Tristana gains a kill or assist.",
+
+			"active": {
+				"stats": {
+					"magic_damage": "70 + ability.level * 45 + champion.stats.ability_power * 0.80",
+					"slow_duration": "1 + ability.level * 0.5"
+				},
+
+				"info": "Tristana fires at the ground to propel herself to a target location, dealing magic damage and slowing surrounding units by 60% for a time when she lands."
+			}
+		},
+
+		"explosive_shot": {
+			"name": "Explosive Shot",
+
+			"max_level": 5,
+			"range": "550 + (champion.level - 1) * 9",
+			"mana_cost": "50 + ability.level * 10",
+			"cooldown": "16",
+
+			"passive": {
+				"stats": {
+					"magic_damage": "50 + ability.level * 25 + champion.stats.ability_power * 0.25"
+				},
+
+				"info": "Enemies explode when slain by Tristana's basic attacks, dealing magic damage to enemies within 75 range."
+			},
+
+			"active": {
+				"stats": {
+					"magic_damage": "80 + ability.level * 50 + champion.stats.ability_power"
+				},
+
+				"info": "Rends the target enemy with shrapnel, reducing healing and health regeneration by 50% and dealing magic damage over 5 seconds."
+			}
+		},
+
+		"buster_shot": {
+			"name": "Buster Shot",
+
+			"max_level": 5,
+			"range": "550 + (champion.level - 1) * 9",
+			"mana_cost": "50",
+			"cooldown": "60",
+
+			"active": {
+				"stats": {
+					"magic_damage": "300 + ability.level * 100 + champion.stats.ability_power * 1.5",
+					"knockback_distance": "600 + ability.level * 200",
+					"knockback_force_width": "200"
+				},
+
+				"info": "Tristana fires a massive cannonball at an enemy unit, dealing magic damage and knocking them and surrounding units back."
+			}
+		}
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"templates": [
+		"modal.template.html",
+		"add_item.template.html",
+		"item.template.html",
+		"ability.template.html"
+	]
+}

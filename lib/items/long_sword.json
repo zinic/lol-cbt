@@ -1,0 +1,12 @@
+{
+	"name": "Long Sword",
+	"cost": 360,
+	"sell_value": 280,
+
+	"stats": {
+		"attack_damage": 10
+	},
+
+	"effects": [
+	]
+}

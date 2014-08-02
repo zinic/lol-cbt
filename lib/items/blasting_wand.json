@@ -1,0 +1,9 @@
+{
+	"name": "Blasting Wand",
+	"cost": 860,
+	"sell_value": 602,
+
+	"stats": {
+		"ability_power": 40
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"name": "Vampiric Scepter",
+	"cost": 800,
+	"sell_value": 560,
+
+	"stats": {
+		"attack_damage": 10,
+		"lifesteal": 8
+	},
+
+	"effects": [
+	]
+}

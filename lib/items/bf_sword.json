@@ -1,0 +1,9 @@
+{
+	"name": "B. F. Sword",
+	"cost": 1550,
+	"sell_value": 1085,
+
+	"stats": {
+		"attack_damage": 50
+	}
+}

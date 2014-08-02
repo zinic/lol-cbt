@@ -1,0 +1,22 @@
+{
+	"name": "Boots of Speed",
+	"cost": 325,
+	"sell_value": 227,
+
+	"stats": {
+	},
+
+	"effects": [
+		{
+			"name": "Enhanced Movement",
+			"type": "PASSIVE",
+			"unique": true,
+
+			"stats": {
+				"movement_speed": 25
+			},
+
+			"info": ""
+		}
+	]
+}

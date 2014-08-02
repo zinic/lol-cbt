@@ -1,0 +1,20 @@
+{
+	"name": "Doran's Ring",
+	"cost": 400,
+	"sell_value": 160,
+
+	"stats": {
+		"health": 60,
+		"ability_power": 15,
+		"mana_regen": 3
+	},
+
+	"effects": [
+		{
+			"type": "SIMPLE",
+			"unique": false,
+
+			"info": "Restores 5 mana when champion kills an enemy unit."
+		}
+	]
+}

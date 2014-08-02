@@ -1,0 +1,21 @@
+{
+	"name": "Doran's Shield",
+	"cost": 440,
+	"sell_value": 176,
+
+	"stats": {
+		"health": 80,
+		"health_regen": 6
+	},
+
+	"effects": [
+		{
+			"type": "PASSIVE",
+			"unique": true,
+
+			"stats": {},
+
+			"info": "Blocks 8 damage from enemy champion basic attacks."
+		}
+	]
+}

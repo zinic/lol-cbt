@@ -1,0 +1,9 @@
+{
+	"name": "Nedlessly Large Rod",
+	"cost": 1600,
+	"sell_value": 1120,
+
+	"stats": {
+		"ability_power": 80
+	}
+}
