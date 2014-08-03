@@ -1,10 +1,10 @@
 {
-	"name": "Long Sword",
-	"cost": 360,
+	"name": "Null-Magic Mantle",
+	"cost": 400,
 	"sell_value": 280,
 
 	"stats": {
-		"attack_damage": 10
+		"magic_resist": 20
 	},
 
 	"built_from": [	],

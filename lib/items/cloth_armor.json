@@ -1,0 +1,12 @@
+{
+	"name": "Cloth Armor",
+	"cost": 300,
+	"sell_value": 210,
+
+	"stats": {
+		"armor": 15
+	},
+
+	"built_from": [	],
+	"effects": {}
+}

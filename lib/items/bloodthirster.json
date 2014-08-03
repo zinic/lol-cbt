@@ -7,6 +7,11 @@
 		"attack_damage": 80
 	},
 
+	"built_from": [
+		"vampiric_scepter",
+		"bf_sword"
+	],
+
 	"effects": {
 		"bt_lifesteal": {
 			"type": "passive",

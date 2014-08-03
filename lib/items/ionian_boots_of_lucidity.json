@@ -7,6 +7,10 @@
 		"cooldown_reduction": 15
 	},
 
+	"built_from": [
+		"boots_of_speed"
+	],
+
 	"effects": {
 		"enhanced_movement": {
 			"name": "Enhanced Movement",

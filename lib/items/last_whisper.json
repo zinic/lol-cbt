@@ -2,9 +2,15 @@
 	"name": "Last Whisper",
 	"cost": 2300,
 	"sell_value": 1610,
+
 	"stats": {
 		"attack_damage": 40
 	},
+
+	"built_from": [
+		"pickaxe",
+		"long_sword"
+	],
 
 	"effects": {
 		"lastwhisper": {

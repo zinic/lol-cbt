@@ -7,6 +7,11 @@
 		"armor": 25
 	},
 
+	"built_from": [
+		"boots_of_speed",
+		"cloth_armor"
+	],
+
 	"effects": {
 		"enhanced_movement": {
 			"name": "Enhanced Movement",

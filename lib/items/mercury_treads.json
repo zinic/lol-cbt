@@ -7,6 +7,11 @@
 		"magic_resist": 25
 	},
 
+	"built_from": [
+		"boots_of_speed",
+		"null_magic_mantle"
+	],
+
 	"effects": {
 		"enhanced_movement": {
 			"name": "Enhanced Movement",

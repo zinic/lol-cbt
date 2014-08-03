@@ -3,8 +3,8 @@
 	"cost": 325,
 	"sell_value": 227,
 
-	"stats": {
-	},
+	"stats": {},
+	"built_from": [	],
 
 	"effects": {
 		"enhanced_movement": {
