@@ -8,8 +8,8 @@
 		"health_regen": 6
 	},
 
-	"effects": [
-		{
+	"effects": {
+		"dorans_shield": {
 			"type": "PASSIVE",
 			"unique": true,
 
@@ -17,5 +17,5 @@
 
 			"info": "Blocks 8 damage from enemy champion basic attacks."
 		}
-	]
+	}
 }

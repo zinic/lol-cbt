@@ -5,5 +5,7 @@
 
 	"stats": {
 		"attack_damage": 50
-	}
+	},
+
+	"effects": {}
 }

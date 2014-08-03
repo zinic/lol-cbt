@@ -1,0 +1,23 @@
+<div>
+	<span>${type} Effect $if {!is_empty(name)}:${name}$endif</span>
+
+	<table>
+		<tbody>
+			$if {!is_empty(unique)}
+			<tr>
+				<td>Unique:</td>
+				<td>${unique}</td>
+			</tr>
+			$endif
+
+			${effects}
+
+			$if {!is_empty(info)}
+			<tr>
+				<td>Info:</td>
+				<td>${info}</td>
+			</tr>
+			$endif
+		</tbody>
+	</table>
+</div>

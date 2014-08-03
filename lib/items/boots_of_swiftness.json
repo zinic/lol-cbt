@@ -1,0 +1,27 @@
+{
+	"name": "Boots of swiftness",
+	"cost": 1000,
+	"sell_value": 700,
+
+	"stats": {},
+
+	"effects": {
+		"enhanced_movement": {
+			"name": "Enhanced Movement",
+			"type": "passive",
+			"unique": true,
+
+			"stats": {
+				"movement_speed": 60
+			}
+		},
+
+		"slow_resist": {
+			"name": "Slow Resist",
+			"type": "passive",
+			"unique": true,
+
+			"info": "Movement slowing effects are reduced by 25%."
+		}
+	}
+}

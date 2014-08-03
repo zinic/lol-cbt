@@ -1,0 +1,26 @@
+{
+	"name": "Bloodthirster",
+	"cost": 3500,
+	"sell_value": 2450,
+
+	"stats": {
+		"attack_damage": 80
+	},
+
+	"effects": {
+		"bt_lifesteal": {
+			"type": "passive",
+			"unique": true,
+			"stats": {
+				"lifesteal": 20
+			}
+		},
+
+		"bt_overheal": {
+			"type": "passive",
+			"unique": true,
+			"stats": {},
+			"info": "Your life steal overheals you, converting the excess healing into a shield that absorbs up to 50-350 damage and decays when out of combat for 25 seconds."
+		}
+	}
+}

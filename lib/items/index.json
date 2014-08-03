@@ -1,13 +1,20 @@
 {
 	"items": [
-		"dorans_blade.json",
-		"dorans_shield.json",
-		"dorans_ring.json",
-		"long_sword.json",
-		"boots_of_speed.json",
-		"vampiric_scepter.json",
+		"bf_sword.json",
 		"blasting_wand.json",
+		"bloodthirster.json",
+		"boots_of_speed.json",
+		"boots_of_swiftness.json",
+		"dorans_blade.json",
+		"dorans_ring.json",
+		"dorans_shield.json",
+		"ionian_boots_of_lucidity.json",
+		"last_whisper.json",
+		"long_sword.json",
+		"mercury_treads.json",
 		"needlessly_large_rod.json",
-		"bf_sword.json"
+		"ninja_tabi.json",
+		"pickaxe.json",
+		"vampiric_scepter.json"
 	]
 }

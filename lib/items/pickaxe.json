@@ -1,0 +1,11 @@
+{
+	"name": "Pickaxe",
+	"cost": 875,
+	"sell_value": 613,
+
+	"stats": {
+		"attack_damage": 25
+	},
+
+	"effects": {}
+}

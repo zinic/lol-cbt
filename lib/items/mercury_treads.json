@@ -1,0 +1,29 @@
+{
+	"name": "Mercury's Treads",
+	"cost": 1200,
+	"sell_value": 840,
+
+	"stats": {
+		"magic_resist": 25
+	},
+
+	"effects": {
+		"enhanced_movement": {
+			"name": "Enhanced Movement",
+			"type": "PASSIVE",
+			"unique": true,
+
+			"stats": {
+				"movement_speed": 45
+			}
+		},
+
+		"tenacity": {
+			"name": "Tenacity",
+			"type": "passive",
+			"unique": true,
+
+			"info": "The duration of stuns, slows, taunts, fears, silences, blinds, polymorphs, and immobilizes are reduced by 35%."
+		}
+	}
+}

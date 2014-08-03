@@ -1,9 +1,10 @@
 {
-	"name": "Boots of Speed",
-	"cost": 325,
-	"sell_value": 227,
+	"name": "Ionian Boots of Lucidity",
+	"cost": 1100,
+	"sell_value": 770,
 
 	"stats": {
+		"cooldown_reduction": 15
 	},
 
 	"effects": {
@@ -13,10 +14,8 @@
 			"unique": true,
 
 			"stats": {
-				"movement_speed": 25
-			},
-
-			"info": ""
+				"movement_speed": 45
+			}
 		}
 	}
 }

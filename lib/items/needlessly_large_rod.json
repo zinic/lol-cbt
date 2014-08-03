@@ -5,5 +5,7 @@
 
 	"stats": {
 		"ability_power": 80
-	}
+	},
+
+	"effects": {}
 }

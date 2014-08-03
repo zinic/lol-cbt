@@ -9,12 +9,12 @@
 		"mana_regen": 3
 	},
 
-	"effects": [
-		{
-			"type": "SIMPLE",
+	"effects": {
+		"dorans_ring": {
+			"type": "passive",
 			"unique": false,
 
 			"info": "Restores 5 mana when champion kills an enemy unit."
 		}
-	]
+	}
 }

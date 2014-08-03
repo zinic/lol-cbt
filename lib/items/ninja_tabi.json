@@ -1,0 +1,28 @@
+{
+	"name": "Ninja Tabi",
+	"cost": 1000,
+	"sell_value": 700,
+
+	"stats": {
+		"armor": 25
+	},
+
+	"effects": {
+		"enhanced_movement": {
+			"name": "Enhanced Movement",
+			"type": "passive",
+			"unique": true,
+
+			"stats": {
+				"movement_speed": 45
+			}
+		},
+
+		"ninja_tabi": {
+			"type": "passive",
+			"unique": true,
+
+			"info": "Unique: Blocks 10% of the damage from basic attacks."
+		}
+	}
+}
