@@ -8,7 +8,12 @@
 					<tbody>
 						<tr>
 							<td class="name">Level</td>
-							<td class="value">${level}</td>
+							<td class="value">
+								${level}
+								$if {can_add_level}
+									<img src="/lib/css/images/plus_24x24.png" alt="Add Level" onclick="add_ability_level('${key}', ${level});" />
+								$endif
+							</td>
 						</tr>
 
 						$if {!is_empty(range)}
