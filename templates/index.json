@@ -1,6 +1,7 @@
 {
 	"templates": [
 		"modal.template.html",
+		"input_modal.template.html",
 		"add_item.template.html",
 		"item.template.html",
 		"effect.template.html",

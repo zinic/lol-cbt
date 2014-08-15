@@ -1,229 +1,277 @@
 <html>
-	<head>
-		<title>League of Legends - Champion Build Tool</title>
+    <head>
+        <title>League of Legends - Champion Build Tool</title>
 
-		<!-- Links -->
-		<link rel="stylesheet" type="text/css" href="/lib/css/style.css" />
-		<link rel="stylesheet" type="text/css" href="/lib/css/smoothness/jquery-ui-1.10.4.custom.css" />
-		<link rel="stylesheet" type="text/css" href="/lib/css/jquery-ui-editable/jquery-ui-editable-1.5.1.css" />
+        <!-- Links -->
+        <link rel="stylesheet" type="text/css" href="/lib/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="/lib/css/smoothness/jquery-ui-1.10.4.custom.css" />
+        <link rel="stylesheet" type="text/css" href="/lib/css/jquery-ui-editable/jquery-ui-editable-1.5.1.css" />
 
-		<!-- Libraries -->
-		<script type="text/javascript" src="/lib/js/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript" src="/lib/js/jquery-ui-1.10.4.min.js"></script>
-		<script type="text/javascript" src="/lib/js/jquery-ui-editable-1.5.1.min.js"></script>
-		<script type="text/javascript" src="/lib/js/notify-combined.min.js"></script>
-		<script type="text/javascript" src="/lib/js/jsonpath.js"></script>
-		<script type="text/javascript" src="/lib/js/manager/manager.js"></script>
+        <!-- Libraries -->
+        <script type="text/javascript" src="/lib/js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="/lib/js/jquery-ui-1.10.4.min.js"></script>
+        <script type="text/javascript" src="/lib/js/jquery-ui-editable-1.5.1.min.js"></script>
+        <script type="text/javascript" src="/lib/js/notify-combined.min.js"></script>
+        <script type="text/javascript" src="/lib/js/Chart.js"></script>
+        <script type="text/javascript" src="/lib/js/jsonpath.js"></script>
+        <script type="text/javascript" src="/lib/js/manager/manager.js"></script>
 
-		<!-- Init GCM -->
-		<script type="text/javascript">
-			$(document).ready(init);
-		</script>
-	</head>
+        <!-- Init GCM -->
+        <script type="text/javascript">
+            $(document).ready(init);
+        </script>
+    </head>
 
-	<body>
-		<div id="root_pane">
-			<div id="user_help_pane">
-				<a href="#" onclick="save();">Save</a>
-				<a href="#" onclick="undo();">Undo</a>
-				<a href="#" onclick="redo();">Redo</a>
-				<a href="#" onclick="reset();">Reset</a>
-			</div>
+    <body>
+        <div id="root_pane">
+            <div id="user_help_pane">
+                <div>
+                    <a href="#" onclick="save();">Save</a>
+                    <a href="#" onclick="undo();">Undo</a>
+                    <a href="#" onclick="redo();">Redo</a>
+                    <a href="#" onclick="reset();">Reset</a>
+                </div>
 
-			<div id="stats_pane">
-				<div>
-					<span class"heading">Select Champion</span>
+                <br />
 
-					<select id="selected_champion" onchange="load_champion();">
-					</select>
-				</div>
+                <div>
+                    <a href="#" onclick="render_chart();">Render Data</a>
+                </div>
+            </div>
 
-				<br /><br />
+            <div id="stats_pane">
+                <div>
+                    <span class"heading">Select Champion</span>
 
-				<span class="heading" id="champion_name" >Champion Info</span>
+                    <select id="selected_champion" onchange="load_champion();">
+                    </select>
+                </div>
 
-				<br /><br />
+                <br /><br />
 
-				<div>
-					<span>Level: </span>
-					<select id="champion_level" onchange="update_level();" disabled>
-						<option value="0" selected>1</option>
-						<option value="1">2</option>
-						<option value="2">3</option>
-						<option value="3">4</option>
-						<option value="4">5</option>
-						<option value="5">6</option>
-						<option value="6">7</option>
-						<option value="7">8</option>
-						<option value="8">9</option>
-						<option value="9">10</option>
-						<option value="10">11</option>
-						<option value="11">12</option>
-						<option value="12">13</option>
-						<option value="13">14</option>
-						<option value="14">15</option>
-						<option value="15">16</option>
-						<option value="16">17</option>
-						<option value="17">18</option>
-					</select>
-				</div>
+                <span class="heading" id="champion_name" >Champion Info</span>
 
-				<br />
+                <br /><br />
 
-				<div class="side_by_side_stat_table_pane" style="float: left;">
-					<table>
-						<thead />
-						<tbody>
-							<tr>
-								<td class="name">Health</td>
-								<td id="champion_health" class="value"></td>
-							</tr>
+                <div>
+                    <div style="float: left;">
+                        <span style="font-weight: bold">Level: </span>
+                        <select id="champion_level" onchange="update_level();" disabled>
+                            <option value="0" selected>1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                            <option value="7">8</option>
+                            <option value="8">9</option>
+                            <option value="9">10</option>
+                            <option value="10">11</option>
+                            <option value="11">12</option>
+                            <option value="12">13</option>
+                            <option value="13">14</option>
+                            <option value="14">15</option>
+                            <option value="15">16</option>
+                            <option value="16">17</option>
+                            <option value="17">18</option>
+                        </select>
+                    </div>
 
-							<tr>
-								<td class="name">Health Regeneration</td>
-								<td id="champion_health_regen" class="value"></td>
-							</tr>
+                    <div style="position: relative; left: 40px; float: left;">
+                        <span style="font-weight: bold">Gold: </span>
+                        <span id="champion_gold">0</span>
+                    </div>
 
-							<tr>
-								<td class="name">Mana</td>
-								<td id="champion_mana" class="value"></td>
-							</tr>
+                    <div style="position: relative; left: 160px; float: left;">
+                        <span style="font-weight: bold">Theoretical Game Time Required: </span>
+                        <span id="tgt_required_min">0 Minutes</span>
+                        <span id="tgt_required_sec">0 Seconds</span>
+                    </div>
 
-							<tr>
-								<td class="name">Mana Regeneration</td>
-								<td id="champion_mana_regen" class="value"></td>
-							</tr>
+                    <div style="position: relative; left: 240px; float: clear;">
+                        <span style="font-weight: bold">Last Hit Miss %</span>
+                        <input id="tgt_lh_miss_chance" type="text" size="4" value="0" onkeydown="update_lh_miss_chance(event);" />
 
-							<tr>
-								<td class="name">Range</td>
-								<td id="champion_range" class="value"></td>
-							</tr>
+                        <table style="position: relative; left: 730px;" id="tgt_breakdown" class="">
+                            <tbody>
+                                <tr>
+                                    <td>Melee Lane Minions:</td>
+                                    <td id="num_lane_melee"></td>
+                                </tr>
+                                <tr>
+                                    <td>Caster Lane Minions:</td>
+                                    <td id="num_lane_caster"></td>
+                                </tr>
+                                <tr>
+                                    <td>Siege Lane Minions:</td>
+                                    <td id="num_lane_siege"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-							<tr>
-								<td class="name">Attack Type</td>
-								<td id="champion_attack_type" class="value"></td>
-							</tr>
+                <br />
 
-							<tr>
-								<td class="name">Attack Damage</td>
-								<td id="champion_attack_damage" class="value"></td>
-							</tr>
+                <div class="side_by_side_stat_table_pane" style="float: left;">
+                    <table>
+                        <thead />
+                        <tbody>
+                            <tr>
+                                <td class="name">Health</td>
+                                <td id="champion_health" class="value"></td>
+                            </tr>
 
-							<tr>
-								<td class="name">Attack Speed</td>
-								<td id="champion_attack_speed" class="value"></td>
-							</tr>
+                            <tr>
+                                <td class="name">Health Regeneration</td>
+                                <td id="champion_health_regen" class="value"></td>
+                            </tr>
 
-							<tr>
-								<td class="name">Armor Ignored</td>
-								<td id="champion_armor_ignored" class="value"></td>
-							</tr>
+                            <tr>
+                                <td class="name">Mana</td>
+                                <td id="champion_mana" class="value"></td>
+                            </tr>
 
-							<tr>
-								<td class="name">Magic Resist Ignored</td>
-								<td id="champion_magic_resist_ignored" class="value"></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+                            <tr>
+                                <td class="name">Mana Regeneration</td>
+                                <td id="champion_mana_regen" class="value"></td>
+                            </tr>
 
-				<div style="position: relative; width: 100px; float: left;">
-					<p />
-				</div>
+                            <tr>
+                                <td class="name">Range</td>
+                                <td id="champion_range" class="value"></td>
+                            </tr>
 
-				<div class="side_by_side_stat_table_pane" style="float: clear;">
-					<table>
-						<thead />
-						<tbody>
-							<tr>
-								<td class="name">Cooldown Reduction</td>
-								<td id="champion_cooldown_reduction" class="value"></td>
-							</tr>
+                            <tr>
+                                <td class="name">Attack Type</td>
+                                <td id="champion_attack_type" class="value"></td>
+                            </tr>
 
-							<tr>
-								<td class="name">Armor</td>
-								<td id="champion_armor" class="value"></td>
-							</tr>
+                            <tr>
+                                <td class="name">Attack Damage</td>
+                                <td id="champion_attack_damage" class="value"></td>
+                            </tr>
 
-							<tr>
-								<td class="name">Ability Power</td>
-								<td id="champion_ability_power" class="value"></td>
-							</tr>
+                            <tr>
+                                <td class="name">Attack Speed</td>
+                                <td id="champion_attack_speed" class="value"></td>
+                            </tr>
 
-							<tr>
-								<td class="name">Armor Penetration</td>
-								<td id="champion_armor_pen" class="value"></td>
-							</tr>
+                            <tr>
+                                <td class="name">Armor Ignored</td>
+                                <td id="champion_armor_ignored" class="value"></td>
+                            </tr>
 
-							<tr>
-								<td class="name">Magic Resist</td>
-								<td id="champion_magic_resist" class="value"></td>
-							</tr>
+                            <tr>
+                                <td class="name">Magic Resist Ignored</td>
+                                <td id="champion_magic_resist_ignored" class="value"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-							<tr>
-								<td class="name">Magic Penetration</td>
-								<td id="champion_magic_pen" class="value"></td>
-							</tr>
+                <div style="position: relative; width: 100px; float: left;">
+                    <p />
+                </div>
 
-							<tr>
-								<td class="name">Movement Speed</td>
-								<td id="champion_movement_speed" class="value"></td>
-							</tr>
+                <div class="side_by_side_stat_table_pane" style="float: clear;">
+                    <table>
+                        <thead />
+                        <tbody>
+                            <tr>
+                                <td class="name">Cooldown Reduction</td>
+                                <td id="champion_cooldown_reduction" class="value"></td>
+                            </tr>
 
-							<tr>
-								<td class="name">Crit Chance</td>
-								<td id="champion_crit_chance" class="value"></td>
-							</tr>
+                            <tr>
+                                <td class="name">Armor</td>
+                                <td id="champion_armor" class="value"></td>
+                            </tr>
 
-							<tr>
-								<td class="name">Lifesteal</td>
-								<td id="champion_lifesteal" class="value"></td>
-							</tr>
+                            <tr>
+                                <td class="name">Ability Power</td>
+                                <td id="champion_ability_power" class="value"></td>
+                            </tr>
 
-							<tr>
-								<td class="name">Spellvamp</td>
-								<td id="champion_spellvamp" class="value"></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+                            <tr>
+                                <td class="name">Armor Penetration</td>
+                                <td id="champion_armor_pen" class="value"></td>
+                            </tr>
 
-				<br /><br /><br />
+                            <tr>
+                                <td class="name">Magic Resist</td>
+                                <td id="champion_magic_resist" class="value"></td>
+                            </tr>
 
-				<div id="abilities_pane">
-					<div class="heading">
-						<span>Abilities</span>
-					</div>
+                            <tr>
+                                <td class="name">Magic Penetration</td>
+                                <td id="champion_magic_pen" class="value"></td>
+                            </tr>
 
-					<br /><br />
+                            <tr>
+                                <td class="name">Movement Speed</td>
+                                <td id="champion_movement_speed" class="value"></td>
+                            </tr>
 
-					<div id="abilities_table_pane">
-					</div>
-				</div>
+                            <tr>
+                                <td class="name">Crit Chance</td>
+                                <td id="champion_crit_chance" class="value"></td>
+                            </tr>
 
-				<br /><br /><br />
+                            <tr>
+                                <td class="name">Lifesteal</td>
+                                <td id="champion_lifesteal" class="value"></td>
+                            </tr>
 
-				<div id="items_pane">
-					<div class="heading">
-						<span>Items</span>
-						<img class="add_item" src="/lib/css/images/plus_24x24.png" alt="Add Item" onclick="add_new_item();" />
-					</div>
+                            <tr>
+                                <td class="name">Spellvamp</td>
+                                <td id="champion_spellvamp" class="value"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-					<br /><br />
+                <br /><br /><br />
 
-					<div id="items_table_pane">
-					</div>
-				</div>
-			</div>
-		</div>
+                <div id="abilities_pane">
+                    <div class="heading">
+                        <span>Abilities</span>
+                    </div>
 
-		<div id="info_pane" class="hidden">
-		</div>
+                    <br /><br />
 
-		<div id="cover_pane" class="hidden">
-		</div>
+                    <div id="abilities_table_pane">
+                    </div>
+                </div>
 
-		<div id="input_modal" class="hidden">
-		</div>
-	</body>
+                <br /><br /><br />
+
+                <div id="items_pane">
+                    <div class="heading">
+                        <span>Items</span>
+                        <img class="add_item" src="/lib/css/images/plus_24x24.png" alt="Add Item" onclick="add_new_item();" />
+                    </div>
+
+                    <br /><br />
+
+                    <div id="items_table_pane">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="info_pane" class="hidden">
+        </div>
+
+        <div id="cover_pane" class="hidden">
+        </div>
+
+        <div id="chart_pane" class="hidden">
+            <canvas id="champion_chart" width="400" height="400"></canvas>
+        </div>
+
+        <div id="modal" class="hidden">
+        </div>
+    </body>
 </html>

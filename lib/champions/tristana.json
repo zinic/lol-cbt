@@ -52,7 +52,7 @@
 
 			"active": {
 				"stats": {
-					"attack_speed": "30 + ability.level * 15"
+					"attack_speed": "30 + ability.level_magnitude * 15"
 				},
 
 				"info": "Increases Tristana's attack speed for 7 seconds."
@@ -65,13 +65,13 @@
 			"max_level": 5,
 			"range": 900,
 			"mana_cost": 60,
-			"cooldown": "22 - ability.level * 2",
+			"cooldown": "22 - ability.level_magnitude * 2",
 			"info": "Rocket Jump's cooldown resets whenever Tristana gains a kill or assist.",
 
 			"active": {
 				"stats": {
-					"magic_damage": "70 + ability.level * 45 + champion.stats.ability_power * 0.80",
-					"slow_duration": "1 + ability.level * 0.5"
+					"magic_damage": "70 + ability.level_magnitude * 45 + champion.stats.ability_power * 0.80",
+					"slow_duration": "1 + ability.level_magnitude * 0.5"
 				},
 
 				"info": "Tristana fires at the ground to propel herself to a target location, dealing magic damage and slowing surrounding units by 60% for a time when she lands."
@@ -83,12 +83,12 @@
 
 			"max_level": 5,
 			"range": "550 + (champion.level - 1) * 9",
-			"mana_cost": "50 + ability.level * 10",
+			"mana_cost": "50 + ability.level_magnitude * 10",
 			"cooldown": "16",
 
 			"passive": {
 				"stats": {
-					"magic_damage": "50 + ability.level * 25 + champion.stats.ability_power * 0.25"
+					"magic_damage": "50 + ability.level_magnitude * 25 + champion.stats.ability_power * 0.25"
 				},
 
 				"info": "Enemies explode when slain by Tristana's basic attacks, dealing magic damage to enemies within 75 range."
@@ -96,7 +96,7 @@
 
 			"active": {
 				"stats": {
-					"magic_damage": "80 + ability.level * 50 + champion.stats.ability_power"
+					"magic_damage": "80 + ability.level_magnitude * 50 + champion.stats.ability_power"
 				},
 
 				"info": "Rends the target enemy with shrapnel, reducing healing and health regeneration by 50% and dealing magic damage over 5 seconds."
@@ -113,8 +113,8 @@
 
 			"active": {
 				"stats": {
-					"magic_damage": "300 + ability.level * 100 + champion.stats.ability_power * 1.5",
-					"knockback_distance": "600 + ability.level * 200",
+					"magic_damage": "300 + ability.level_magnitude * 100 + champion.stats.ability_power * 1.5",
+					"knockback_distance": "600 + ability.level_magnitude * 200",
 					"knockback_force_width": "200"
 				},
 

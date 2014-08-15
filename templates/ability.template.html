@@ -1,72 +1,77 @@
 <span>${name}</span>
 
 <table class="ability_table">
-	<tbody>
-		<tr>
-			<td>
-				<table>
-					<tbody>
-						<tr>
-							<td class="name">Level</td>
-							<td class="value">
-								${level}
-								$if {can_add_level}
-									<img src="/lib/css/images/plus_24x24.png" alt="Add Level" onclick="add_ability_level('${key}', ${level});" />
-								$endif
-							</td>
-						</tr>
+    <tbody>
+        <tr>
+            <td>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="name">Level</td>
+                            <td class="value">
+                                $if {!is_empty(level)}
+                                    ${level}
+                                $else
+                                    N/A
+                                $endif
 
-						$if {!is_empty(range)}
-						<tr>
-							<td class="name">Range</td>
-							<td class="value">${range}</td>
-						</tr>
-						$endif
+                                $if {can_add_level}
+                                    <img src="/lib/css/images/plus_24x24.png" alt="Add Level" onclick="add_ability_level('${key}', ${level});" />
+                                $endif
+                            </td>
+                        </tr>
 
-						$if {!is_empty(mana_cost)}
-						<tr>
-							<td class="name">Mana Cost</td>
-							<td class="value">${mana_cost}</td>
-						</tr>
-						$endif
+                        $if {!is_empty(range)}
+                        <tr>
+                            <td class="name">Range</td>
+                            <td class="value">${range}</td>
+                        </tr>
+                        $endif
 
-						$if {!is_empty(cooldown)}
-						<tr>
-							<td class="name">Cooldown</td>
-							<td class="value">${cooldown}</td>
-						</tr>
-						$endif
+                        $if {!is_empty(mana_cost)}
+                        <tr>
+                            <td class="name">Mana Cost</td>
+                            <td class="value">${mana_cost}</td>
+                        </tr>
+                        $endif
 
-						$if {!is_empty(info)}
-						<tr>
-							<td class="name">Info</td>
-							<td class="value">${info}</td>
-						</tr>
-						$endif
+                        $if {!is_empty(cooldown)}
+                        <tr>
+                            <td class="name">Cooldown</td>
+                            <td class="value">${cooldown}</td>
+                        </tr>
+                        $endif
 
-						<tr>
-							<td />
-							<td>
-								${passive}
-							</td>
-						</tr>
+                        $if {!is_empty(info)}
+                        <tr>
+                            <td class="name">Info</td>
+                            <td class="value">${info}</td>
+                        </tr>
+                        $endif
 
-						<tr>
-							<td>
-								<br />
-							</td>
-							<td />
-						</tr>
+                        <tr>
+                            <td />
+                            <td>
+                                ${passive}
+                            </td>
+                        </tr>
 
-						<tr>
-							<td />
-							<td>
-								${active}
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</td>
-		</tr>
-	</tbody>
+                        <tr>
+                            <td>
+                                <br />
+                            </td>
+                            <td />
+                        </tr>
+
+                        <tr>
+                            <td />
+                            <td>
+                                ${active}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
 </table>

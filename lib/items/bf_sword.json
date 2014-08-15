@@ -1,12 +1,12 @@
 {
-	"name": "B. F. Sword",
-	"cost": 1550,
-	"sell_value": 1085,
+    "name": "B. F. Sword",
+    "cost": 1550,
+    "sell_value": 1085,
 
-	"stats": {
-		"attack_damage": 50
-	},
+    "stats": {
+        "attack_damage": 50
+    },
 
-	"built_from": [	],
-	"effects": {}
+    "built_from": [	],
+    "effects": {}
 }
